@@ -121,10 +121,12 @@ jobs:
       env:
         CONFIG_FILE_PATH: ${{ matrix.ARCHITECTURE }}/${{ env.CONFIG_FILE }}
       run: |
+        pwd
         [ -e files ] && mv files openwrt/files
         [ -e $CONFIG_FILE_PATH ] && mv $CONFIG_FILE_PATH openwrt/$CONFIG_FILE
         chmod +x $DIY_P2_SH
         cd openwrt
+        pwd
         $GITHUB_WORKSPACE/$DIY_P2_SH ${{ matrix.ARCHITECTURE }}
 
     - name: SSH 连接到 Actions
