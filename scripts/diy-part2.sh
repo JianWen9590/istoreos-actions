@@ -82,7 +82,7 @@ sed -i 's/CONFIG_PACKAGE_luci-theme-bootstrap=y/CONFIG_PACKAGE_luci-theme-bootst
 # 添加第三方应用
 mkdir kiddin9
 pushd kiddin9
-git clone --depth=1 https://github.com/kiddin9/openwrt-packages .
+git clone --depth=1 https://github.com/kiddin9/kwrt-packages .
 popd
 
 mkdir Modem-Support
@@ -100,27 +100,27 @@ pushd package/community
 
 # 系统相关应用
 #Cpufreq（conf已有）
-# svn export https://github.com/kiddin9/openwrt-packages/trunk/luci-app-cpufreq
-# svn export https://github.com/kiddin9/openwrt-packages/trunk/luci-lib-mac-vendor
+# svn export https://github.com/kiddin9/kwrt-packages/trunk/luci-app-cpufreq
+# svn export https://github.com/kiddin9/kwrt-packages/trunk/luci-lib-mac-vendor
 #Fan（conf已有）
-# svn export https://github.com/kiddin9/openwrt-packages/trunk/luci-app-fan
+# svn export https://github.com/kiddin9/kwrt-packages/trunk/luci-app-fan
 #Poweroff（iStoreOS已有）
-# svn export https://github.com/kiddin9/openwrt-packages/trunk/luci-app-poweroff
+# svn export https://github.com/kiddin9/kwrt-packages/trunk/luci-app-poweroff
 #Diskman（conf已有）
-# svn export https://github.com/kiddin9/openwrt-packages/trunk/luci-app-diskman
+# svn export https://github.com/kiddin9/kwrt-packages/trunk/luci-app-diskman
 #Fileassistant（iStoreOS已有）
-#svn export https://github.com/kiddin9/openwrt-packages/trunk/luci-app-fileassistant
+#svn export https://github.com/kiddin9/kwrt-packages/trunk/luci-app-fileassistant
 #Guest-wifi
-# svn export https://github.com/kiddin9/openwrt-packages/trunk/luci-app-guest-wifi
+# svn export https://github.com/kiddin9/kwrt-packages/trunk/luci-app-guest-wifi
 mkdir luci-app-guest-wifi
 cp -rf ../../kiddin9/luci-app-guest-wifi/* luci-app-guest-wifi
 #Onliner
 mkdir luci-app-onliner
 cp -rf ../../kiddin9/luci-app-onliner/* luci-app-onliner
 #Eqos（iStoreOS已有）
-#svn export https://github.com/kiddin9/openwrt-packages/trunk/luci-app-eqos
+#svn export https://github.com/kiddin9/kwrt-packages/trunk/luci-app-eqos
 #Wolplus（已有Wol）
-# svn export https://github.com/kiddin9/openwrt-packages/trunk/luci-app-wolplus
+# svn export https://github.com/kiddin9/kwrt-packages/trunk/luci-app-wolplus
 #WiFischedule（未找到包）
 #mkdir luci-app-wifischedule
 #cp -rf ../../kiddin9/luci-app-wifischedule/* luci-app-wifischedule
@@ -147,7 +147,7 @@ cp -rf ../../kiddin9/luci-app-rtbwmon/* luci-app-rtbwmon
 # 科学上网和代理应用
 #SSR
 # svn export https://github.com/fw876/helloworld/trunk helloworld
-# svn export https://github.com/kiddin9/openwrt-packages/trunk/luci-app-ssr-plus
+# svn export https://github.com/kiddin9/kwrt-packages/trunk/luci-app-ssr-plus
 # mkdir luci-app-ssr-plus
 # cp -rf ../../kiddin9/luci-app-ssr-plus/* luci-app-ssr-plus
 # cp -rf ../../kiddin9/dns2socks/* dns2socks
@@ -193,8 +193,8 @@ fi
 
 # 去广告
 #ADGuardHome（kiddin9）
-# svn export https://github.com/kiddin9/openwrt-packages/trunk/adguardhome
-# svn export https://github.com/kiddin9/openwrt-packages/trunk/luci-app-adguardhome
+# svn export https://github.com/kiddin9/kwrt-packages/trunk/adguardhome
+# svn export https://github.com/kiddin9/kwrt-packages/trunk/luci-app-adguardhome
 mkdir luci-app-adguardhome
 cp -rf ../../kiddin9/luci-app-adguardhome/* luci-app-adguardhome
 cp -rf ../../MyConfig/configs/istoreos/general/applications/luci-app-adguardhome/* luci-app-adguardhome
@@ -235,14 +235,14 @@ sed -i 's/+PACKAGE_$(PKG_NAME)_INCLUDE_binary:adguardhome//' luci-app-adguardhom
 
 #内网穿透
 #Zerotier（iStoreOS已有）
-# svn export https://github.com/kiddin9/openwrt-packages/trunk/luci-app-zerotier
+# svn export https://github.com/kiddin9/kwrt-packages/trunk/luci-app-zerotier
 
 # 其他
 #Socat（iStoreOS已有）
-#svn export https://github.com/kiddin9/openwrt-packages/trunk/luci-app-socat
+#svn export https://github.com/kiddin9/kwrt-packages/trunk/luci-app-socat
 #Unblockneteasemusic
-# svn export https://github.com/kiddin9/openwrt-packages/trunk/UnblockNeteaseMusic
-# svn export https://github.com/kiddin9/openwrt-packages/trunk/luci-app-unblockneteasemusic
+# svn export https://github.com/kiddin9/kwrt-packages/trunk/UnblockNeteaseMusic
+# svn export https://github.com/kiddin9/kwrt-packages/trunk/luci-app-unblockneteasemusic
 mkdir UnblockNeteaseMusic
 mkdir luci-app-unblockneteasemusic
 cp -rf ../../kiddin9/UnblockNeteaseMusic/* UnblockNeteaseMusic
