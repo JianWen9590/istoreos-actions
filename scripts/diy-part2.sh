@@ -25,6 +25,10 @@ sed -i 's/192.168.1.1/192.168.10.1/g' package/base-files/files/bin/config_genera
 # 默认打开WiFi
 sed -i 's/disabled=1/disabled=0/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
 
+# 处理linkease和linkmount下载超时问题
+sed -i 's/dl.istoreos.com/fw0.koolcenter.com/g' feeds/linkease_nas/network/services/linkease/Makefile
+sed -i 's/dl.istoreos.com/fw0.koolcenter.com/g' feeds/linkease_nas/network/services/linkmount/Makefile
+
 # 移除ddns
 # sed -i 's/CONFIG_PACKAGE_ddns-scripts=y/CONFIG_PACKAGE_ddns-scripts=n/' .config
 # sed -i 's/CONFIG_PACKAGE_ddns-scripts-cloudflare=y/CONFIG_PACKAGE_ddns-scripts-cloudflare=n/' .config
